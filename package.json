@@ -1,0 +1,24 @@
+{
+  "name": "tactics-api",
+  "version": "1.0.0",
+  "description": "Node.js REST API with server side pagination, Sequelize and PostgreSQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Steven Riggs",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stevenriggs/tactics-api.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.4"
+  }
+}
