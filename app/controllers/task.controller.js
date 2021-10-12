@@ -48,8 +48,14 @@ exports.create = (req, res) => {
 
 // Retrieve all Tasks from the database.
 exports.findAll = (req, res) => {
-  const { page, size, title } = req.query;
-  var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
+  const { page, size, title, description, isCompleted } = req.query;
+
+  // URL query filter conditions.
+  const condition = {
+    ...(title && { title: { [Op.like]: `%${title}%` } }),
+    ...(description && { description: { [Op.like]: `%${description}%` } }),
+    ...(isCompleted && { isCompleted: `${isCompleted}` }),
+  };
 
   const { limit, offset } = getPagination(page, size);
 
