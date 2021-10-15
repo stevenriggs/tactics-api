@@ -1,5 +1,5 @@
 module.exports = {
-  HOST: "localhost",
+  HOST: "host.docker.internal",
   USER: "docker",
   PASSWORD: "docker",
   DB: "tactics",
